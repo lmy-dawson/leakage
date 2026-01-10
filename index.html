@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leakage - Stop Wasting Money on Subscriptions</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(34, 197, 94, 0.5); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        .glow-effect {
+            animation: glow 2s ease-in-out infinite;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #22c55e 0%, #86efac 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(34, 197, 94, 0.05) 100%);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100">
+    <!-- Navigation -->
+    <nav class="border-b border-slate-800/50 backdrop-blur-sm sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="leakage_logo.png" alt="Leakage Logo" class="h-16 object-contain">
+            </div>
+            <div class="text-sm text-emerald-400/80 font-medium">Find where your money quietly leaks</div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="py-32 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute top-20 right-20 w-72 h-72 bg-green-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="inline-block mb-6 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/5">
+                <span class="text-emerald-400 text-sm font-semibold">Early Access Available</span>
+            </div>
+            <h1 class="text-6xl md:text-7xl font-black mb-6 text-white leading-tight tracking-tight">
+                You're paying for <span class="gradient-text">subscriptions you don't use.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Leakage finds recurring charges, explains what they are, and tells you which ones are worth keeping. See the money silently slipping away.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-10 py-4 rounded-lg font-bold hover:from-green-600 hover:to-emerald-700 transition transform hover:scale-105 shadow-lg glow-effect text-lg">
+                    Get early access
+                </button>
+                <button class="border-2 border-emerald-500/50 text-white px-10 py-4 rounded-lg font-bold hover:bg-emerald-500/10 transition text-lg">
+                    See how it works
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS TEASER -->
+    <section class="py-12 px-6 border-y border-slate-800/50">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-emerald-400 mb-2">$312</div>
+                    <p class="text-slate-400">Average yearly waste</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-emerald-400 mb-2">47%</div>
+                    <p class="text-slate-400">Of subscriptions unused</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-emerald-400 mb-2">5 min</div>
+                    <p class="text-slate-400">To get your analysis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAIN SECTION -->
+    <section class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold mb-4 text-white">The leaks you don't see</h2>
+            <p class="text-lg text-slate-400 mb-16">Most subscriptions don't feel expensive. That's why they slip through.</p>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="group gradient-bg border border-emerald-500/20 rounded-xl p-6 hover:border-emerald-500/50 transition">
+                    <div class="text-4xl font-bold text-emerald-400 mb-2">$7</div>
+                    <p class="text-slate-400 text-sm">Streaming service</p>
+                    <p class="text-slate-500 text-xs mt-2">Haven't watched in 6 months</p>
+                </div>
+                <div class="group gradient-bg border border-emerald-500/20 rounded-xl p-6 hover:border-emerald-500/50 transition">
+                    <div class="text-4xl font-bold text-emerald-400 mb-2">$12</div>
+                    <p class="text-slate-400 text-sm">Project management tool</p>
+                    <p class="text-slate-500 text-xs mt-2">Free tier would work fine</p>
+                </div>
+                <div class="group gradient-bg border border-emerald-500/20 rounded-xl p-6 hover:border-emerald-500/50 transition">
+                    <div class="text-4xl font-bold text-emerald-400 mb-2">$19</div>
+                    <p class="text-slate-400 text-sm">Cloud storage backup</p>
+                    <p class="text-slate-500 text-xs mt-2">Forgotten trial never cancelled</p>
+                </div>
+                <div class="group gradient-bg border border-emerald-500/20 rounded-xl p-6 hover:border-emerald-500/50 transition">
+                    <div class="text-4xl font-bold text-emerald-400 mb-2">$29</div>
+                    <p class="text-slate-400 text-sm">Premium subscription</p>
+                    <p class="text-slate-500 text-xs mt-2">"Might need someday"</p>
+                </div>
+            </div>
+            <div class="mt-16 p-8 gradient-bg border border-emerald-500/20 rounded-xl">
+                <p class="text-center text-slate-300 text-lg">
+                    <span class="text-emerald-400 font-bold">$67 per month</span> × 12 = <span class="text-emerald-400 font-bold">$804 per year</span> quietly disappearing.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="py-20 px-6 border-y border-slate-800/50">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-white">Three steps to clarity</h2>
+                <p class="text-slate-400 text-lg">See exactly where your money is going.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="relative">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 text-white font-bold text-2xl mx-auto mb-6">
+                        1
+                    </div>
+                    <div class="gradient-bg border border-emerald-500/30 rounded-xl p-8 text-center">
+                        <h3 class="text-2xl font-bold text-white mb-3">Connect & Scan</h3>
+                        <p class="text-slate-400 mb-4">
+                            Link your email or upload a bank statement. Takes 60 seconds.
+                        </p>
+                        <p class="text-xs text-slate-500">We never store your data longer than needed</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 text-white font-bold text-2xl mx-auto mb-6">
+                        2
+                    </div>
+                    <div class="gradient-bg border border-emerald-500/30 rounded-xl p-8 text-center">
+                        <h3 class="text-2xl font-bold text-white mb-3">Identify & Explain</h3>
+                        <p class="text-slate-400 mb-4">
+                            We find every recurring charge and tell you what it actually is.
+                        </p>
+                        <p class="text-xs text-slate-500">No surprises. Just facts.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative">
+                    <div class="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 text-white font-bold text-2xl mx-auto mb-6">
+                        3
+                    </div>
+                    <div class="gradient-bg border border-emerald-500/30 rounded-xl p-8 text-center">
+                        <h3 class="text-2xl font-bold text-white mb-3">Recommend & Save</h3>
+                        <p class="text-slate-400 mb-4">
+                            We tell you which ones are likely wasted. Keep or cancel with confidence.
+                        </p>
+                        <p class="text-xs text-slate-500">Actionable, not judgmental</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFFERENTIATION -->
+    <section class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold mb-4 text-white">Not your typical finance app</h2>
+            <p class="text-slate-400 mb-12">We don't list subscriptions. We solve your problem.</p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="gradient-bg border border-emerald-500/30 rounded-xl p-8 hover:border-emerald-500/60 transition">
+                    <div class="flex items-start gap-4">
+                        <div class="text-2xl">📊</div>
+                        <div>
+                            <p class="text-white font-bold text-lg mb-2">Explanation, not lists</p>
+                            <p class="text-slate-400">We tell you what each charge is, why you have it, and whether it's worth keeping.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gradient-bg border border-emerald-500/30 rounded-xl p-8 hover:border-emerald-500/60 transition">
+                    <div class="flex items-start gap-4">
+                        <div class="text-2xl">🎯</div>
+                        <div>
+                            <p class="text-white font-bold text-lg mb-2">Recommendations, not alerts</p>
+                            <p class="text-slate-400">Actionable insights that help you decide, not endless notifications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gradient-bg border border-emerald-500/30 rounded-xl p-8 hover:border-emerald-500/60 transition">
+                    <div class="flex items-start gap-4">
+                        <div class="text-2xl">✨</div>
+                        <div>
+                            <p class="text-white font-bold text-lg mb-2">Decision support, not budgeting</p>
+                            <p class="text-slate-400">We help you decide what's worth your money, not track every dollar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gradient-bg border border-emerald-500/30 rounded-xl p-8 hover:border-emerald-500/60 transition">
+                    <div class="flex items-start gap-4">
+                        <div class="text-2xl">🚫</div>
+                        <div>
+                            <p class="text-white font-bold text-lg mb-2">No shame. No spreadsheets.</p>
+                            <p class="text-slate-400">Just facts, clarity, and a path forward.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="py-20 px-6 border-y border-slate-800/50">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-white text-center">Early testers are seeing results</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="gradient-bg border border-emerald-500/30 rounded-xl p-8">
+                    <p class="text-slate-300 italic mb-4">
+                        "I had no idea I was still paying for half of these. Cancelled 4 subscriptions immediately."
+                    </p>
+                    <p class="text-emerald-400 font-semibold">— Early tester</p>
+                    <p class="text-slate-500 text-sm mt-2">Saved $87/month</p>
+                </div>
+                <div class="gradient-bg border border-emerald-500/30 rounded-xl p-8">
+                    <p class="text-slate-300 italic mb-4">
+                        "Finally someone told me which ones are actually worth the money. Really helpful."
+                    </p>
+                    <p class="text-emerald-400 font-semibold">— Beta user</p>
+                    <p class="text-slate-500 text-sm mt-2">Kept the 3 that matter</p>
+                </div>
+                <div class="gradient-bg border border-emerald-500/30 rounded-xl p-8">
+                    <p class="text-slate-300 italic mb-4">
+                        "Not preachy. Just clear. I needed this."
+                    </p>
+                    <p class="text-emerald-400 font-semibold">— Beta user</p>
+                    <p class="text-slate-500 text-sm mt-2">Saved $156/year so far</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMAIL CAPTURE -->
+    <section class="py-24 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-50">
+            <div class="absolute top-0 right-0 w-80 h-80 bg-green-500/20 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-2xl mx-auto relative z-10">
+            <div class="gradient-bg border border-emerald-500/50 rounded-2xl p-12 text-center">
+                <h2 class="text-4xl font-bold mb-4 text-white">
+                    Ready to take back control?
+                </h2>
+                <p class="text-slate-400 text-lg mb-10">
+                    Join early users getting free analysis when we launch. See your money leaks before anyone else.
+                </p>
+                <form class="flex flex-col sm:flex-row gap-3 mb-6">
+                    <div class="flex-1 flex flex-col gap-2">
+                        <input 
+                            type="email" 
+                            placeholder="your@email.com" 
+                            class="px-6 py-4 rounded-lg bg-slate-900/80 border-2 border-emerald-500/30 text-white placeholder-slate-600 focus:outline-none focus:border-emerald-500 focus:bg-slate-900 transition text-lg"
+                            required
+                        >
+                        <span class="text-red-400 text-sm hidden" id="email-error"></span>
+                    </div>
+                    <button 
+                        type="submit"
+                        class="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-10 py-4 rounded-lg font-bold hover:from-green-600 hover:to-emerald-700 transition transform hover:scale-105 whitespace-nowrap shadow-lg h-fit"
+                    >
+                        Join the waitlist
+                    </button>
+                </form>
+                <p class="text-slate-500 text-sm">No spam. No noise. Just clarity when we launch.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/50 py-8 px-6 text-center text-slate-500 text-sm">
+        <p>© 2026 Leakage. Find where your money quietly leaks.</p>
+    </footer>
+
+    <script>
+        // Email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        const form = document.querySelector('form');
+        const emailInput = form.querySelector('input[type="email"]');
+        const emailError = document.getElementById('email-error');
+        const button = form.querySelector('button');
+
+        // Real-time email validation
+        emailInput.addEventListener('blur', function() {
+            validateEmail();
+        });
+
+        emailInput.addEventListener('input', function() {
+            if (emailError.classList.contains('hidden') === false) {
+                validateEmail();
+            }
+        });
+
+        function validateEmail() {
+            const email = emailInput.value.trim();
+            
+            if (!email) {
+                showError('Email is required');
+                return false;
+            }
+
+            if (!emailRegex.test(email)) {
+                showError('Please enter a valid email address');
+                return false;
+            }
+
+            hideError();
+            return true;
+        }
+
+        function showError(message) {
+            emailError.textContent = message;
+            emailError.classList.remove('hidden');
+            emailInput.classList.add('border-red-500');
+            emailInput.classList.remove('border-emerald-500/30');
+        }
+
+        function hideError() {
+            emailError.classList.add('hidden');
+            emailInput.classList.remove('border-red-500');
+            emailInput.classList.add('border-emerald-500/30');
+        }
+
+        // Handle form submission
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Validate email before submission
+            if (!validateEmail()) {
+                return;
+            }
+
+            const email = emailInput.value.trim();
+            const originalText = button.textContent;
+
+            // Disable button while submitting
+            button.disabled = true;
+            button.textContent = 'Adding...';
+
+            try {
+                // Send email to backend
+                const response = await fetch('/api/waitlist', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || 'Failed to add email');
+                }
+
+                // Show success message
+                button.textContent = 'Welcome to the list! 🎉';
+                hideError();
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.disabled = false;
+                    form.reset();
+                }, 3000);
+            } catch (error) {
+                // Show error message
+                const errorMsg = error.message || 'Error adding email';
+                button.textContent = errorMsg;
+                button.style.background = '#ef4444';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '';
+                    button.disabled = false;
+                }, 3000);
+            }
+        });
+
+        // Smooth scroll for "See how it works"
+        document.querySelectorAll('button')[1].addEventListener('click', function() {
+            document.querySelector('section:nth-of-type(4)').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Primary CTA scroll to email form
+        document.querySelector('button:first-of-type').addEventListener('click', function() {
+            document.querySelector('form').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Add scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

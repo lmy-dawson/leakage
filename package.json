@@ -2,16 +2,12 @@
   "name": "leakage-waitlist",
   "version": "1.0.0",
   "description": "Leakage - Stop wasting money on subscriptions",
-  "main": "server.js",
+  "main": "api/waitlist.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "build": "echo 'No build required for static site'"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "cors": "^2.8.5"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
+    "@supabase/supabase-js": "^2.38.0",
+    "@vercel/node": "^5.5.16"
   }
 }

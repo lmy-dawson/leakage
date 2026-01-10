@@ -1,0 +1,8 @@
+{
+  "buildCommand": "npm install",
+  "outputDirectory": ".",
+  "env": {
+    "SUPABASE_URL": "https://qshxyylfzlnfungziuwb.supabase.co",
+    "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzaHh5eWxmemxuZnVuZ3ppdXdiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgwNjM4NzQsImV4cCI6MjA4MzYzOTg3NH0.3oh3S8F8fvsa28kOwc62I3iSJJcs5WeGo6iQeLW49gA"
+  }
+}

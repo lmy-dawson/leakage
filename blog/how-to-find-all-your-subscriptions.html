@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Find Every Subscription You're Paying For (And Stop the Ones You Forgot) | Leakage</title>
+    <meta name="description" content="Most people are paying for 3-5 subscriptions they completely forgot about. Here's exactly how to find every recurring charge on your account — step by step.">
+    <meta name="keywords" content="how to find all subscriptions, find forgotten subscriptions, cancel unused subscriptions, recurring charges bank statement, subscription tracker, stop paying for subscriptions you forgot">
+    <meta property="og:title" content="How to Find Every Subscription You're Paying For">
+    <meta property="og:description" content="Most people are paying for 3-5 subscriptions they completely forgot about. Here's exactly how to find every one of them.">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/png" href="../icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * { font-family: 'Nunito', sans-serif; }
+        body { background: #080c0a; color: #e2e8e4; }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #22c55e 0%, #86efac 60%, #4ade80 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card {
+            background: linear-gradient(135deg, rgba(34,197,94,0.06) 0%, rgba(34,197,94,0.02) 100%);
+            border: 1px solid rgba(34,197,94,0.18);
+            border-radius: 16px;
+        }
+
+        .hero-badge {
+            background: rgba(34,197,94,0.1);
+            border: 1px solid rgba(34,197,94,0.35);
+            border-radius: 999px;
+            padding: 5px 16px;
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #4ade80;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+        }
+
+        .prose h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: white;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .prose h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #d1fae5;
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .prose p {
+            color: #94a3b8;
+            line-height: 1.85;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+
+        .prose strong { color: #e2e8e4; font-weight: 700; }
+
+        .prose ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .prose ul li {
+            color: #94a3b8;
+            padding: 6px 0 6px 28px;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .prose ul li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-size: 0.7rem;
+            top: 10px;
+        }
+
+        .prose ol {
+            list-style: none;
+            counter-reset: step;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .prose ol li {
+            counter-increment: step;
+            color: #94a3b8;
+            padding: 6px 0 6px 36px;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .prose ol li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            font-size: 0.7rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 8px;
+        }
+
+        .callout {
+            background: linear-gradient(135deg, rgba(34,197,94,0.08) 0%, rgba(34,197,94,0.03) 100%);
+            border-left: 3px solid #22c55e;
+            border-radius: 0 12px 12px 0;
+            padding: 20px 24px;
+            margin: 2rem 0;
+        }
+
+        .callout p { margin: 0; color: #d1fae5; }
+
+        .step-box {
+            background: linear-gradient(135deg, rgba(34,197,94,0.06) 0%, rgba(34,197,94,0.02) 100%);
+            border: 1px solid rgba(34,197,94,0.2);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 1.5rem 0;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            font-weight: 900;
+            font-size: 0.85rem;
+            padding: 4px 12px;
+            border-radius: 999px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .glow-btn {
+            animation: pulse-glow 2.5s ease-in-out infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 24px rgba(34,197,94,0.4); }
+            50% { box-shadow: 0 0 48px rgba(34,197,94,0.6); }
+        }
+
+        .toc-link {
+            color: #4ade80;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: block;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(34,197,94,0.1);
+            transition: color 0.2s;
+        }
+        .toc-link:hover { color: #86efac; }
+    </style>
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav class="border-b border-slate-800/40 backdrop-blur-md sticky top-0 z-50" style="background: rgba(8,12,10,0.9);">
+        <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="/">
+                <img src="../leakage_logo.png" alt="Leakage Logo" class="h-12 object-contain">
+            </a>
+            <a href="/" class="text-sm font-semibold px-5 py-2 rounded-lg text-white"
+                style="background: linear-gradient(135deg, #22c55e, #16a34a);">
+                Try Leakage free
+            </a>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="py-20 px-6 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl pointer-events-none" style="background: radial-gradient(circle, rgba(34,197,94,0.06), transparent 70%);"></div>
+        <div class="max-w-3xl mx-auto relative z-10">
+            <div class="hero-badge mb-6">Money Tips</div>
+            <h1 class="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+                How to Find Every Subscription You're Paying For <span class="gradient-text">(And Stop the Ones You Forgot)</span>
+            </h1>
+            <p class="text-xl text-slate-400 mb-8 leading-relaxed">
+                The average person pays for 3-5 subscriptions they completely forgot about. That's quietly draining $50–$150 every single month. Here's exactly how to find every one of them.
+            </p>
+            <div class="flex items-center gap-4 text-sm text-slate-500">
+                <span>By the Leakage Team</span>
+                <span>•</span>
+                <span>5 min read</span>
+                <span>•</span>
+                <span>Updated 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Body -->
+    <main class="px-6 pb-24">
+        <div class="max-w-3xl mx-auto">
+
+            <!-- Table of Contents -->
+            <div class="card p-8 mb-12">
+                <p class="text-emerald-400 font-bold text-sm uppercase tracking-wider mb-4">In this article</p>
+                <a href="#why-it-happens" class="toc-link">Why forgotten subscriptions happen to everyone</a>
+                <a href="#method-1" class="toc-link">Method 1: Check your email</a>
+                <a href="#method-2" class="toc-link">Method 2: Go through your bank statement</a>
+                <a href="#method-3" class="toc-link">Method 3: Check your phone app stores</a>
+                <a href="#method-4" class="toc-link">Method 4: Check PayPal and digital wallets</a>
+                <a href="#what-to-do" class="toc-link">What to do once you find them</a>
+                <a href="#never-again" class="toc-link">How to never deal with this again</a>
+            </div>
+
+            <div class="prose">
+
+                <div class="callout">
+                    <p>💡 <strong>Quick stat:</strong> Research shows the average person underestimates their monthly subscription spend by $133. What you think you're paying and what you're actually paying are rarely the same number.</p>
+                </div>
+
+                <!-- Section 1 -->
+                <h2 id="why-it-happens">Why forgotten subscriptions happen to everyone</h2>
+                <p>It's not carelessness. It's just how subscriptions are designed.</p>
+                <p>They start as free trials. You sign up, forget to cancel, and suddenly you're being charged $9.99 a month for something you used twice. Or a service quietly raises its price from $12 to $17 and you never notice because you're not looking at your bank statement line by line every month. Nobody does.</p>
+                <p>The companies know this. <strong>The business model depends on it.</strong></p>
+                <p>The good news is there's a simple process to find every single subscription you're paying for right now. It takes about 20–30 minutes and the savings are usually immediate.</p>
+
+                <!-- Method 1 -->
+                <h2 id="method-1">Method 1: Search your email inbox</h2>
+                <p>Your email is the most complete record of every service you've ever signed up for. Here's how to use it.</p>
+
+                <div class="step-box">
+                    <div class="step-number">Step 1</div>
+                    <h3 style="margin-top:8px;">Search for billing keywords</h3>
+                    <p>Open your email and search for these terms one at a time:</p>
+                    <ul>
+                        <li>"receipt"</li>
+                        <li>"invoice"</li>
+                        <li>"subscription"</li>
+                        <li>"your payment"</li>
+                        <li>"billing"</li>
+                        <li>"thank you for your purchase"</li>
+                        <li>"renewal"</li>
+                        <li>"free trial"</li>
+                    </ul>
+                    <p>Go through each set of results and note every service that appears. You'll be surprised what comes up.</p>
+                </div>
+
+                <div class="step-box">
+                    <div class="step-number">Step 2</div>
+                    <h3 style="margin-top:8px;">Filter by sender</h3>
+                    <p>Look for emails from payment processors like PayPal, Stripe, and your bank. These often contain charges you wouldn't find by searching for service names directly — because the billing name on your statement is sometimes different from the product name you remember.</p>
+                </div>
+
+                <div class="callout">
+                    <p>⚠️ <strong>Watch out for annual subscriptions.</strong> These are the sneakiest. You signed up last year, forgot completely, and now you're being charged again. Search your email for emails from exactly 12 months ago to catch these.</p>
+                </div>
+
+                <!-- Method 2 -->
+                <h2 id="method-2">Method 2: Go through your bank statement line by line</h2>
+                <p>This is more tedious but the most accurate method because it shows you what's actually leaving your account — not just what you signed up for.</p>
+
+                <ol>
+                    <li>Download your last 3 months of bank statements as a PDF or CSV</li>
+                    <li>Look for any charge that appears more than once at the same amount</li>
+                    <li>Highlight anything you don't immediately recognise</li>
+                    <li>Google the name of anything unfamiliar — billing names are often shortened or use company legal names rather than the product name</li>
+                    <li>Make a list of every recurring charge with the amount and frequency</li>
+                </ol>
+
+                <p>Common charges people don't recognise include things like "AMZN Digital" (Amazon Prime or Kindle Unlimited), "APPL*" charges (Apple subscriptions), or "Google*" (Google One storage). These are easy to miss if you're not looking carefully.</p>
+
+                <h3>What to look for specifically</h3>
+                <p>Subscriptions usually appear as the same amount on the same date every month. Look for:</p>
+                <ul>
+                    <li>Charges between $5–$30 that repeat monthly</li>
+                    <li>Charges between $50–$200 that repeat annually</li>
+                    <li>Small charges under $5 — these are easy to overlook but add up</li>
+                    <li>Any charge you can't immediately name</li>
+                </ul>
+
+                <!-- Method 3 -->
+                <h2 id="method-3">Method 3: Check your phone app store subscriptions</h2>
+                <p>This one catches a lot of people. Apps you downloaded once and never opened again can still be charging you monthly.</p>
+
+                <div class="step-box">
+                    <div class="step-number">iPhone / iOS</div>
+                    <h3 style="margin-top:8px;">Find your Apple subscriptions</h3>
+                    <ol>
+                        <li>Open Settings on your iPhone</li>
+                        <li>Tap your name at the top</li>
+                        <li>Tap "Subscriptions"</li>
+                        <li>You'll see every active and recently expired subscription through Apple</li>
+                    </ol>
+                </div>
+
+                <div class="step-box">
+                    <div class="step-number">Android / Google</div>
+                    <h3 style="margin-top:8px;">Find your Google Play subscriptions</h3>
+                    <ol>
+                        <li>Open the Google Play Store app</li>
+                        <li>Tap your profile picture in the top right</li>
+                        <li>Tap "Payments & subscriptions"</li>
+                        <li>Tap "Subscriptions" to see everything active</li>
+                    </ol>
+                </div>
+
+                <p>Go through both lists carefully. Cancel anything you haven't used in the last 30 days or don't plan to use in the next 30 days. You can always re-subscribe later.</p>
+
+                <!-- Method 4 -->
+                <h2 id="method-4">Method 4: Check PayPal and digital wallets</h2>
+                <p>If you've ever paid for something with PayPal, there's a good chance you set up automatic payments that are still running.</p>
+
+                <ol>
+                    <li>Log into PayPal</li>
+                    <li>Go to Settings → Payments → Manage automatic payments</li>
+                    <li>You'll see every service that has permission to charge your PayPal automatically</li>
+                    <li>Cancel anything you don't actively use</li>
+                </ol>
+
+                <p>Do the same for any other digital wallets you use — Google Pay, Apple Pay, or any buy-now-pay-later services you may have used in the past.</p>
+
+                <!-- What to do -->
+                <h2 id="what-to-do">What to do once you find them</h2>
+                <p>Once you have your full list, go through it and ask one question for each subscription:</p>
+
+                <div class="callout">
+                    <p>💭 <strong>"Would I sign up for this today if I didn't already have it?"</strong></p>
+                </div>
+
+                <p>If the answer is no — cancel it immediately. Don't wait, don't give yourself time to second-guess. Companies make cancellation deliberately awkward, so do it while you're motivated.</p>
+
+                <p>If the answer is yes — keep it, but note the price. Check if there's a cheaper plan or a competitor offering the same thing for less. Many services offer discounts if you simply ask, especially if you mention you're considering cancelling.</p>
+
+                <h3>How to cancel subscriptions that make it difficult</h3>
+                <ul>
+                    <li><strong>For subscriptions with no cancel button:</strong> Email them directly asking to cancel and keep a record of the email</li>
+                    <li><strong>For trials you can't find how to cancel:</strong> Contact your bank and ask them to block future charges from that company</li>
+                    <li><strong>For subscriptions that auto-renewed without warning:</strong> You're often entitled to a refund — contact the company directly within a few days of the charge</li>
+                </ul>
+
+                <!-- Never again -->
+                <h2 id="never-again">How to never deal with this again</h2>
+                <p>Going through this process once is good. But subscriptions accumulate again over time. Free trials, impulse purchases, price increases — it all adds up quietly.</p>
+
+                <p>The real solution is something that watches your spending automatically and tells you when something needs attention — without requiring you to remember to check anything.</p>
+
+                <p>That's exactly what Leakage does. Instead of you hunting through emails and bank statements every few months, Leakage monitors your recurring charges continuously and sends you a plain English alert the moment something changes, spikes, or looks like a waste.</p>
+
+                <ul>
+                    <li>A subscription you haven't used in months — you get an alert</li>
+                    <li>A price that crept up quietly — you get an alert</li>
+                    <li>A bill that's about to hit — you get an alert before it happens</li>
+                    <li>A spending spike on food delivery — you get an alert with the exact number</li>
+                </ul>
+
+                <p>No dashboards to check. No spreadsheets to maintain. Just a message that tells you what's wrong and what to do about it.</p>
+            </div>
+
+            <!-- CTA -->
+            <div class="card p-10 text-center mt-16" style="border-color: rgba(34,197,94,0.3);">
+                <div class="hero-badge mb-4">Free during early access</div>
+                <h2 class="text-3xl font-black text-white mb-3">Stop finding leaks manually</h2>
+                <p class="text-slate-400 mb-8 max-w-lg mx-auto">Join the waitlist and be first to know when Leakage launches. We'll find every money leak automatically so you never have to do this again.</p>
+                <a href="/"
+                    class="glow-btn inline-block text-white px-10 py-4 rounded-xl font-bold text-lg transition transform hover:scale-105"
+                    style="background: linear-gradient(135deg, #22c55e, #16a34a);">
+                    Join the waitlist — it's free
+                </a>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="mt-16">
+                <p class="text-emerald-400 font-bold text-sm uppercase tracking-wider mb-6">More from Leakage</p>
+                <div class="grid md:grid-cols-2 gap-5">
+                    <a href="/blog/unrecognised-bank-charges.html" class="card p-6 block hover:border-emerald-500/40 transition">
+                        <div class="hero-badge mb-3">Read now</div>
+                        <h3 class="text-white font-bold text-lg mb-2">Why your bank statement has charges you don't recognise</h3>
+                        <p class="text-slate-400 text-sm">The confusing billing names companies use and what they actually mean.</p>
+                    </a>
+                    <a href="/blog/subscription-waste-per-year.html" class="card p-6 block hover:border-emerald-500/40 transition">
+                        <div class="hero-badge mb-3">Read now</div>
+                        <h3 class="text-white font-bold text-lg mb-2">How much does the average person waste on subscriptions per year?</h3>
+                        <p class="text-slate-400 text-sm">The numbers are higher than you think — and most of it is completely avoidable.</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t py-8 px-6 text-center text-slate-600 text-sm" style="border-color: rgba(34,197,94,0.1);">
+        <p>© 2026 Leakage. Find where your money quietly leaks. · <a href="/" class="text-emerald-600 hover:text-emerald-400">Back to home</a></p>
+    </footer>
+
+</body>
+</html>

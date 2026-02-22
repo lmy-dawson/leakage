@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Your Bank Statement Has Charges You Don't Recognise | Leakage</title>
+    <meta name="description" content="That random charge on your bank statement isn't always fraud. Here's exactly what those confusing billing names mean and how to find out who's charging you.">
+    <meta name="keywords" content="unrecognised charge bank statement, random charge on bank account, what is this charge, unfamiliar bank charge, billing name different from company, mystery charge bank account">
+    <meta property="og:title" content="Why Your Bank Statement Has Charges You Don't Recognise">
+    <meta property="og:description" content="That random charge isn't always fraud. Here's what those confusing billing names actually mean.">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/png" href="../icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * { font-family: 'Nunito', sans-serif; }
+        body { background: #080c0a; color: #e2e8e4; }
+        .gradient-text {
+            background: linear-gradient(135deg, #22c55e 0%, #86efac 60%, #4ade80 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card {
+            background: linear-gradient(135deg, rgba(34,197,94,0.06) 0%, rgba(34,197,94,0.02) 100%);
+            border: 1px solid rgba(34,197,94,0.18);
+            border-radius: 16px;
+        }
+        .hero-badge {
+            background: rgba(34,197,94,0.1);
+            border: 1px solid rgba(34,197,94,0.35);
+            border-radius: 999px;
+            padding: 5px 16px;
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #4ade80;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+        }
+        .prose h2 { font-size: 1.75rem; font-weight: 800; color: white; margin-top: 2.5rem; margin-bottom: 1rem; }
+        .prose h3 { font-size: 1.25rem; font-weight: 700; color: #d1fae5; margin-top: 1.75rem; margin-bottom: 0.75rem; }
+        .prose p { color: #94a3b8; line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.05rem; }
+        .prose strong { color: #e2e8e4; font-weight: 700; }
+        .prose ul { list-style: none; padding: 0; margin-bottom: 1.5rem; }
+        .prose ul li { color: #94a3b8; padding: 6px 0 6px 28px; position: relative; font-size: 1.05rem; line-height: 1.7; }
+        .prose ul li::before { content: '✦'; position: absolute; left: 0; color: #22c55e; font-size: 0.7rem; top: 10px; }
+        .callout { background: linear-gradient(135deg, rgba(34,197,94,0.08) 0%, rgba(34,197,94,0.03) 100%); border-left: 3px solid #22c55e; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 2rem 0; }
+        .callout p { margin: 0; color: #d1fae5; }
+        .charge-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        .charge-table th { background: rgba(34,197,94,0.1); color: #4ade80; font-weight: 700; padding: 12px 16px; text-align: left; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .charge-table td { padding: 12px 16px; color: #94a3b8; font-size: 0.95rem; border-bottom: 1px solid rgba(34,197,94,0.08); }
+        .charge-table td strong { color: #e2e8e4; }
+        .charge-table tr:hover td { background: rgba(34,197,94,0.03); }
+        .toc-link { color: #4ade80; text-decoration: none; font-size: 0.95rem; font-weight: 600; display: block; padding: 6px 0; border-bottom: 1px solid rgba(34,197,94,0.1); transition: color 0.2s; }
+        .toc-link:hover { color: #86efac; }
+        @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 24px rgba(34,197,94,0.4); } 50% { box-shadow: 0 0 48px rgba(34,197,94,0.6); } }
+        .glow-btn { animation: pulse-glow 2.5s ease-in-out infinite; }
+    </style>
+</head>
+<body>
+    <nav class="border-b border-slate-800/40 backdrop-blur-md sticky top-0 z-50" style="background: rgba(8,12,10,0.9);">
+        <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="/"><img src="../leakage_logo.png" alt="Leakage Logo" class="h-12 object-contain"></a>
+            <a href="/" class="text-sm font-semibold px-5 py-2 rounded-lg text-white" style="background: linear-gradient(135deg, #22c55e, #16a34a);">Try Leakage free</a>
+        </div>
+    </nav>
+
+    <header class="py-20 px-6 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl pointer-events-none" style="background: radial-gradient(circle, rgba(34,197,94,0.06), transparent 70%);"></div>
+        <div class="max-w-3xl mx-auto relative z-10">
+            <div class="hero-badge mb-6">Money Tips</div>
+            <h1 class="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+                Why Your Bank Statement Has <span class="gradient-text">Charges You Don't Recognise</span>
+            </h1>
+            <p class="text-xl text-slate-400 mb-8 leading-relaxed">
+                That random charge isn't always fraud. Companies use confusing billing names that look nothing like the product you signed up for. Here's a full guide to decoding them.
+            </p>
+            <div class="flex items-center gap-4 text-sm text-slate-500">
+                <span>By the Leakage Team</span>
+                <span>•</span>
+                <span>6 min read</span>
+                <span>•</span>
+                <span>Updated 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="px-6 pb-24">
+        <div class="max-w-3xl mx-auto">
+
+            <div class="card p-8 mb-12">
+                <p class="text-emerald-400 font-bold text-sm uppercase tracking-wider mb-4">In this article</p>
+                <a href="#why-confusing" class="toc-link">Why billing names are so confusing</a>
+                <a href="#common-charges" class="toc-link">The most common confusing charges decoded</a>
+                <a href="#how-to-identify" class="toc-link">How to identify any unknown charge</a>
+                <a href="#fraud-or-forgotten" class="toc-link">Is it fraud or a forgotten subscription?</a>
+                <a href="#what-to-do" class="toc-link">What to do about it</a>
+            </div>
+
+            <div class="prose">
+
+                <div class="callout">
+                    <p>💡 <strong>Quick fact:</strong> The billing name on your bank statement is the legal trading name of the company — which is often completely different from the product or app name you actually use.</p>
+                </div>
+
+                <h2 id="why-confusing">Why billing names are so confusing</h2>
+                <p>When a company charges you, your bank shows the merchant name they registered with — not the name of the app or service you signed up for. These are often completely different things.</p>
+                <p>For example, you sign up for a meditation app called "Calm." But the company's legal billing name might be "Calm.com Inc" or just "CALM*CALM.COM" — and that's exactly what appears on your statement. Now multiply that across 10-15 services and your bank statement becomes almost unreadable.</p>
+                <p>There are a few other reasons charges look strange:</p>
+                <ul>
+                    <li><strong>Parent companies:</strong> A small app you use might be owned by a larger company whose name appears instead</li>
+                    <li><strong>Payment processors:</strong> Some companies bill through Stripe, PayPal, or other processors and that name shows up instead</li>
+                    <li><strong>Country of registration:</strong> International companies sometimes show billing names from their country of origin</li>
+                    <li><strong>Truncation:</strong> Banks often cut off long names, making them even harder to identify</li>
+                </ul>
+
+                <h2 id="common-charges">The most common confusing charges decoded</h2>
+                <p>Here are the billing names that appear on bank statements most often that people don't recognise:</p>
+
+                <table class="charge-table">
+                    <thead>
+                        <tr>
+                            <th>What you see on your statement</th>
+                            <th>What it actually is</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>AMZN Digital</strong></td><td>Amazon Prime, Kindle Unlimited, or Audible</td></tr>
+                        <tr><td><strong>APPL* or Apple.com/bill</strong></td><td>iCloud storage, Apple TV+, Apple Music, or any App Store subscription</td></tr>
+                        <tr><td><strong>Google*</strong></td><td>Google One storage, YouTube Premium, or Google Play subscriptions</td></tr>
+                        <tr><td><strong>PAYPAL *</strong></td><td>Any service billed through PayPal — could be anything</td></tr>
+                        <tr><td><strong>SPOTIFY USA</strong></td><td>Spotify Premium — straightforward but sometimes shows country code</td></tr>
+                        <tr><td><strong>NFLX or NETFLIX.COM</strong></td><td>Netflix subscription</td></tr>
+                        <tr><td><strong>ADOBE SYSTEMS</strong></td><td>Any Adobe product — Creative Cloud, Acrobat, Lightroom</td></tr>
+                        <tr><td><strong>MSFT* or MICROSOFT</strong></td><td>Microsoft 365, Xbox Game Pass, OneDrive</td></tr>
+                        <tr><td><strong>WWW.AUDIBLE.COM</strong></td><td>Audible audiobook subscription (owned by Amazon)</td></tr>
+                        <tr><td><strong>DROPBOX</strong></td><td>Dropbox Plus or Professional storage plan</td></tr>
+                        <tr><td><strong>CANVA PTY LTD</strong></td><td>Canva Pro design subscription</td></tr>
+                        <tr><td><strong>NOTION LABS</strong></td><td>Notion Plus or Team plan</td></tr>
+                        <tr><td><strong>OPENAI</strong></td><td>ChatGPT Plus subscription</td></tr>
+                        <tr><td><strong>CLOUDFLARE</strong></td><td>Any Cloudflare service or domain registration</td></tr>
+                        <tr><td><strong>DUOLINGO</strong></td><td>Duolingo Plus language learning</td></tr>
+                    </tbody>
+                </table>
+
+                <h2 id="how-to-identify">How to identify any unknown charge</h2>
+                <p>If you see a charge and can't find it in the list above, here's the process to identify it in under 5 minutes:</p>
+
+                <ul>
+                    <li><strong>Google the exact name:</strong> Copy the billing name exactly as it appears and search it. Add the word "subscription" or "charge" to the search. Most common ones are documented online.</li>
+                    <li><strong>Check your email:</strong> Search your inbox for the company name — you almost certainly received a receipt or welcome email when you signed up.</li>
+                    <li><strong>Check your phone subscriptions:</strong> Go to iPhone Settings → your name → Subscriptions, or Google Play → Payments & subscriptions. Many mystery charges come from apps.</li>
+                    <li><strong>Call your bank:</strong> If none of the above works, your bank can often provide the full merchant name and website associated with the charge.</li>
+                    <li><strong>Check PayPal automatic payments:</strong> PayPal → Settings → Payments → Manage automatic payments covers anything billed through PayPal.</li>
+                </ul>
+
+                <h2 id="fraud-or-forgotten">Is it fraud or a forgotten subscription?</h2>
+                <p>This is the most important question — and getting it wrong in either direction costs you.</p>
+
+                <div class="callout">
+                    <p>⚠️ <strong>Important:</strong> Most unrecognised charges are forgotten subscriptions, not fraud. Immediately disputing a charge as fraud when it's actually a legitimate subscription you forgot can cause complications with your account.</p>
+                </div>
+
+                <h3>Signs it's a forgotten subscription</h3>
+                <ul>
+                    <li>The amount is the same every month or year</li>
+                    <li>It appears from a recognisable company name even if unfamiliar</li>
+                    <li>You can find a matching email in your inbox</li>
+                    <li>The amount is a typical subscription price ($5, $9.99, $14.99, $19.99, etc.)</li>
+                </ul>
+
+                <h3>Signs it might actually be fraud</h3>
+                <ul>
+                    <li>The amount is random or unusual (not a standard subscription price)</li>
+                    <li>You find no email receipt anywhere</li>
+                    <li>The charge is from a country you've never interacted with</li>
+                    <li>Multiple small charges appear in quick succession</li>
+                    <li>The merchant name is completely ungooglable</li>
+                </ul>
+
+                <p>If you genuinely believe it's fraud, contact your bank immediately. If it's a forgotten subscription, cancel it directly with the company rather than disputing it — this avoids complications and is faster.</p>
+
+                <h2 id="what-to-do">What to do about it</h2>
+                <p>Once you've identified a charge, you have three options:</p>
+                <ul>
+                    <li><strong>Keep it</strong> — if you still use it and it's worth the money</li>
+                    <li><strong>Cancel it</strong> — go directly to the service's website and cancel through their account settings. Don't rely on your bank to do this — cancelling your card doesn't always stop subscription charges.</li>
+                    <li><strong>Dispute it</strong> — only do this if you genuinely believe it's fraudulent and the company won't refund you directly</li>
+                </ul>
+
+                <p>The bigger issue is that this happens repeatedly. You clear out your subscriptions today, but six months from now you'll have a new set of charges you don't recognise. Free trials auto-convert, prices change, and new services creep in.</p>
+
+                <p>The only real solution is something that watches your spending automatically and alerts you the moment something unfamiliar or unexpected appears — so you deal with it immediately rather than months later.</p>
+            </div>
+
+            <div class="card p-10 text-center mt-16" style="border-color: rgba(34,197,94,0.3);">
+                <div class="hero-badge mb-4">Free during early access</div>
+                <h2 class="text-3xl font-black text-white mb-3">Never stare at a confusing charge again</h2>
+                <p class="text-slate-400 mb-8 max-w-lg mx-auto">Leakage identifies every recurring charge and tells you in plain English what it is and whether it's worth keeping. No more Googling mystery charges.</p>
+                <a href="/" class="glow-btn inline-block text-white px-10 py-4 rounded-xl font-bold text-lg transition transform hover:scale-105" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
+                    Join the waitlist — it's free
+                </a>
+            </div>
+
+            <div class="mt-16">
+                <p class="text-emerald-400 font-bold text-sm uppercase tracking-wider mb-6">More from Leakage</p>
+                <div class="grid md:grid-cols-2 gap-5">
+                    <a href="/blog/how-to-find-all-your-subscriptions.html" class="card p-6 block hover:border-emerald-500/40 transition">
+                        <div class="hero-badge mb-3">Read now</div>
+                        <h3 class="text-white font-bold text-lg mb-2">How to find every subscription you're paying for</h3>
+                        <p class="text-slate-400 text-sm">A step by step guide to hunting down every recurring charge on your account.</p>
+                    </a>
+                    <a href="/blog/subscription-waste-per-year.html" class="card p-6 block hover:border-emerald-500/40 transition">
+                        <div class="hero-badge mb-3">Read now</div>
+                        <h3 class="text-white font-bold text-lg mb-2">How much does the average person waste on subscriptions per year?</h3>
+                        <p class="text-slate-400 text-sm">The numbers are higher than you think — and most of it is completely avoidable.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t py-8 px-6 text-center text-slate-600 text-sm" style="border-color: rgba(34,197,94,0.1);">
+        <p>© 2026 Leakage. Find where your money quietly leaks. · <a href="/" class="text-emerald-600 hover:text-emerald-400">Back to home</a></p>
+    </footer>
+</body>
+</html>
